@@ -40,6 +40,7 @@ Select ONE Additional Feature to Add
     </form>
     <div id="movie-result">
       <p id="movie-text"></p>
+      <img  id="movie-pic">
     </div>
     <hr />
     <!-- Book Question -->
@@ -57,9 +58,15 @@ Select ONE Additional Feature to Add
     </form>
     <div id="book-result">
       <p id="book-text"></p>
+      <img id="bunny-pic">
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+
+      var bunnyimage = {
+        happy:
+        "https://media.tenor.com/o7zJuNnbkAYAAAAi/vibe-loop.gif",
+      }
       
       //========================Movie Question jQuery Code
       $("#movie-form").on("submit", function (event) {
@@ -70,10 +77,19 @@ Select ONE Additional Feature to Add
 
         if (answer === "movie1") {
           $("#movie-text").text("yes! they are considered the smallest domesticated breed, however the pygm rabbit is the smallest species! they both r very tiny and cute");
-          $("#movie-text").image("https://media1.tenor.com/m/46gMJ-TjtDcAAAAC/rabbit-bunny.gif") ;
+          $("#movie-pic").attr("src","https://media1.tenor.com/m/O2M6k1sBnfwAAAAC/rabbit-bunny.gif");
         } 
-        else {
+        if (answer === "movie2") {
           $("#movie-text").text("nuhuh");
+          $("#movie-pic").attr("src","https://media1.tenor.com/m/rwBMBlwPQBMAAAAd/binge-watching-binge.gif");
+        }
+         if (answer === "movie3") {
+          $("#movie-text").text("nooononono.");
+          $("#movie-pic").attr("src","https://media.tenor.com/V74vZud7yJsAAAAi/angry-bunny.gif");
+        }
+         if (answer === "movie4") {
+          $("#movie-text").text("don't. play.");
+          $("#movie-pic").attr("src","https://media1.tenor.com/m/dnLYE6DeqbQAAAAd/binkybunnyfamily-bunny.gif");
         }
       });
 
@@ -84,11 +100,13 @@ Select ONE Additional Feature to Add
         var $answer = $("#book-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
-          $("#book-text").text("YESSSS!");
+        if (answer === "book3") {
+          $("#book-text").text("while the names of the largest bunnies aren't very different, the flemish giant is the biggest. chonk.");
+            $("#bunny-pic").attr("src","https://media.tenor.com/gwCyv91zuj0AAAAi/sybau.gifs://media1.tenor.com/m/dnLYE6DeqbQAAAAd/binkybunnyfamily-bunny.gif");
         } 
-        else {
-          $("#book-text").text("Try Again!");
+        if ( answer ==="book1") {
+          $("#book-text").text("noooo.,...");
+          $("#bunny-pic").attr("src","https://media1.tenor.com/m/Mx8lV2MJ0pAAAAAC/rabbit-strawbbycheesecake.gif");
         }
       });
       
